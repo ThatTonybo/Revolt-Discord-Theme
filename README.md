@@ -13,5 +13,11 @@ A theme that aims to skin Revolt to look as close as possible to Discord
 If you find any bugs, report them using the [issue tracker](https://github.com/ThatTonybo/Revolt-Discord-Theme/issues)
 
 ### Known Bugs
-- Server indicators are partially broken (hover effect and selected effects don't work)
 - The typing indicator's margin on the right side of the message box expands too far 
+
+## Contributors
+- Discord, for the Whitney font and theme colours
+- Darvi, for providing help with server indicators, and then fixing them as well, as well as the drop shadow code for the top bar
+- c, for the original floating message bar code, and for the code to hide the built-in "wave" server indicator
+- zax, for help with bringing the typing indicator, reply and upload modals in line with the message box
+- Nyan, for the drop shadow on server names
