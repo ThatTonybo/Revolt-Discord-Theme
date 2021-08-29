@@ -28,8 +28,8 @@
 
 /* Replicates selected server indicator */
 .czAOsy img, .czAOsy div { border-radius: 50%; transition: 0.25s ease; }
-.czAOsy img:hover, .czAOsy div:hover { border-radius: 16px; }
-.cebzwO img, .cebzwO .sc-jNnpgg, .dtmIia img { border-radius: 16px; }
+.czAOsy img:hover, .czAOsy div:hover { border-radius: 10px; }
+.cebzwO img, .cebzwO .sc-jNnpgg, .dtmIia img { border-radius: 10px; }
 
 /* Brings typing, reply and upload bars in line with message bar */
 .eQUdeu > div, .llyViG, .UjHkE { margin-left: 16px; margin-right: 16px; }
