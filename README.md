@@ -3,7 +3,7 @@ A theme that aims to skin Revolt to look as close as possible to Discord
 
 
 ## Install
-- Open `theme.css` and copy the contents
+- Open `theme.json` and copy the contents
 - Go to Settings -> Appearance -> Advanced Options and click the small "Import a theme" button
 
 ## Bugs
