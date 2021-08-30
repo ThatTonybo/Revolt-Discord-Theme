@@ -17,8 +17,10 @@ If you find any bugs, report them using the [issue tracker](https://github.com/T
 
 ## Contributors
 - Discord, for the Whitney font and theme colors
-- Darvi, for providing help with server indicators, and then fixing them as well, as well as the drop shadow code for the top bar
+- Darvi, for providing help with server indicators, and then fixing them as well, as well as the drop shadow code for the top bar, and for improving the theme workflow (moved theme.json to a CSS @import using Staticly)
 - c, for the original floating message bar code, and for the code to hide the built-in "wave" server indicator
-- zax, for help with bringing the typing indicator, reply and upload modals in line with the message box
+- zax, for help with bringing the typing indicator, reply and upload modals in line with the message box, as well as improving the typing SVG (making it inline)
 - Nyan, for the drop shadow on server names
 - Pikachu, for theming ideas and a variety of smaller changes, such as icon sizing, right click menu and buttons using accent color
+- TaiAurori, for moving the typing indicator to below the message bar
+- Snazzah, for fixing multiple small bugs, as well as creating the animated typing SVG and adding it
