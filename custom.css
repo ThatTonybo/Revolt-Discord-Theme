@@ -11,8 +11,11 @@
 
 @font-face { font-family: Whitney; font-weight: 700; src: url("https://d33wubrfki0l68.cloudfront.net/fdbdb2189fb5c1d8526ea5079611caa18f50959f/8a619/static/700.8e12fb4f.woff") format("woff"); }
 
-/* Use Whitney font */
-* { font-family: Whitney, sans-serif; }
+/* Global font variables */
+:root {
+  --font: Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  --monospace-font: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace !important;
+}
 
 /* Rounded/floating message bar */
 .sc-bTDOke.dXiuJH { margin: 0 16px 24px; border-radius: 8px; }
