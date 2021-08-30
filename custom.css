@@ -17,8 +17,8 @@
 /* Rounded/floating message bar */
 .sc-bTDOke.dXiuJH { margin: 0 16px 24px; border-radius: 8px; }
 
-/* Shadows on edges */
-.sc-hhIiOg { box-shadow: 0 2px 2px #2C2F33; z-index: 1; }
+/* Shadow on edge of top bar */
+.sc-hhIiOg { box-shadow:rgba(4, 4, 5, 0.2) 0px 1px 0px 0px, rgba(6, 6, 7, 0.05) 0px 1.5px 0px 0px, rgba(4, 4, 5, 0.05) 0px 2px 0px 0px; z-index: 1; }
 
 /* Changes divider color to be darker */
 .lmGFyU { border-color: #ffffff0f; }
@@ -32,7 +32,7 @@
 .cebzwO img, .cebzwO .sc-jNnpgg, .dtmIia img { border-radius: 10px; }
 
 /* Brings typing, reply and upload bars in line with message bar */
-.eQUdeu > div, .llyViG, .UjHkE { margin-left: 16px; margin-right: 16px; }
+.eQUdeu > div, .llyViG, .UjHkE { margin-left: 16px; margin-right: 16px !important; border-top-left-radius: 8px; border-top-right-radius: 8px; }
 
 /* Don't round the top corners of the message bar if an extension is active */
 .sc-daBunf ~ .sc-bTDOke.dXiuJH, /* typing indicators */
@@ -46,9 +46,7 @@
 .sc-hhIiOg.elIzZc > div > svg { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
 
 /* Reply and upload modals have the same background colour as the typing indicator */
-.sc-fXazdy, .eQUdeu > div, .llyViG, .UjHkE {
-   background: #2F3136;
-}
+.sc-fXazdy, .eQUdeu > div, .llyViG, .UjHkE { background: #2F3136; }
 
 /* Right click menu improvements */
 #Menu.context-menu { background: #23272A !important; }
@@ -56,12 +54,77 @@
 .context-menu>span:not([data-disabled=true]):active, .context-menu>span:not([data-disabled=true]):focus { background: var(--accent) !important; color: var(--foreground); opacity: 0.8; }
 
 /* User menu icon size adjustment to be equal to Discord */
-.sc-hTRkXV > a:nth-child(2) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1),
-.sc-hTRkXV > a:nth-child(3) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1),
-.sc-hTRkXV > a:nth-child(1) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1) {
-   height: 24px; width: 24px; !important;
-}
+.sc-hTRkXV > a:nth-child(2) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1), .sc-hTRkXV > a:nth-child(3) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1), .sc-hTRkXV > a:nth-child(1) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1) { height: 24px; width: 24px; !important; }
 
-/* Edit profile button now uses accent color */
+/* Buttons in settings now uses accent color */
 .sc-bdnxRM { background: var(--accent); transition: 0.2s ease; }
 button.sc-bdnxRM:hover { background: var(--accent); opacity: 0.8; }
+
+/* Create server circle button */
+div.sc-iNiQyp.jdiWPe div.sc-fFSPTT.ehWzcZ svg.StyledIconBase-ea9ulj-0.hPhvO {
+background: var(--primary-header); color: #3BA55D; border-radius: 50%; transition: 0.25s ease; }
+div.sc-iNiQyp.jdiWPe div.sc-fFSPTT.ehWzcZ svg.StyledIconBase-ea9ulj-0.hPhvO:hover { border-radius: 10px; transition: 0.2s ease; background: #3BA55D; color: white; }
+
+/* Attach file button circle */
+div.sc-hOPeYd.eXirsP div.sc-fFSPTT.ehWzcZ svg.StyledIconBase-ea9ulj-0.hPhvO { background: var(--secondary-foreground); border-radius: 50%; height: 20px; width: 20px; margin-left: 10px; }
+div.sc-hOPeYd.eXirsP div.sc-fFSPTT.ehWzcZ:hover > .StyledIconBase-ea9ulj-0.hPhvO { filter: brightness(120%); }
+div.sc-hOPeYd.eXirsP div.sc-fFSPTT.ehWzcZ svg.StyledIconBase-ea9ulj-0.hPhvO path { color: var(--message-box); }
+
+/* Move input box to the right to allow for upload button spacing */
+.dXiuJH textarea { margin-left: 10px; }
+
+/* Change color of category headings */
+.iJjSgu, .eRblbP summary .padding > svg { color: rgb(142, 146, 151); }
+.iJjSgu:hover, .eRblbP summary .padding > svg { filter: brightness(140%); }
+
+/* Selected server indicator, unread message indicator and hover styles */
+/* Note: Formatting not done, not final */
+.sc-jffHpj foreignObject::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -11px;
+  transform: translateY(-50%);
+  display: block;
+  width: 0;
+  height: 0;
+  background: white;
+  border-radius: 4px;
+  transition: width .25s, height .25s;
+}
+
+.sc-jffHpj foreignObject {
+  mask: unset;
+}
+
+.sc-jffHpj circle {
+  display: none;
+}
+
+/* -- server has unread message(s) */
+.sc-jffHpj foreignObject:not(:last-child)::before {
+  width: 8px;
+  height: 8px;
+}
+
+.sc-jffHpj:hover foreignObject::before {
+  width: 8px;
+  height: 20px !important;
+}
+
+/* -- server selected */
+.sc-jffHpj.cebzwO foreignObject::before {
+  width: 8px;
+  height: 30px !important;
+}
+
+.sc-jffHpj,
+.sc-jffHpj > div,
+.sc-jffHpj > div > svg,
+.sc-jffHpj > div > svg > foreignObject:nth-child(2),
+.sc-iNiQyp {
+  overflow: visible;
+}
+
+/* Edit message dialog changes */
+.bYgUJS textarea { background: #40444B; border-color: #40444B !important; }
