@@ -1,6 +1,6 @@
 /* Discord theme for Revolt by ThatTonybo & contributors */
 
-/* Fonts */
+/* Font imports */
 @font-face { font-family: Whitney; font-weight: 300; src: url("https://d33wubrfki0l68.cloudfront.net/af357ddfdcb29c384b6f6435d3e08a87d669d4c4/4e033/static/300.6c6374ba.woff") format("woff"); }
 
 @font-face { font-family: Whitney; font-weight: 400; src: url("https://d33wubrfki0l68.cloudfront.net/550701559599176e16f1a975734505fd889ca734/fee33/static/400.e8acd7d9.woff") format("woff"); }
@@ -40,9 +40,8 @@
 /* Don't round the top corners of the message bar if an extension is active */
 .sc-daBunf ~ .sc-bTDOke.dXiuJH, /* typing indicators */
 :not(:empty) + .sc-bTDOke.dXiuJH, /* replies */
-.sc-fXazdy ~ .sc-bTDOke.dXiuJH /* attachments */  {
-   border-radius: 0 0 8px 8px;
-}
+.sc-fXazdy ~ .sc-bTDOke.dXiuJH /* attachments */ 
+{ border-radius: 0 0 8px 8px; }
 
 /* Shadow on server name/badge */
 .sc-eirqVv.dSzotL { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
@@ -81,62 +80,20 @@ div.sc-hOPeYd.eXirsP div.sc-fFSPTT.ehWzcZ svg.StyledIconBase-ea9ulj-0.hPhvO path
 .iJjSgu:hover, .eRblbP summary .padding > svg { filter: brightness(140%); }
 
 /* Selected server indicator, unread message indicator and hover styles */
-/* Note: Formatting not done, not final */
-.sc-jffHpj foreignObject::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -11px;
-  transform: translateY(-50%);
-  display: block;
-  width: 0;
-  height: 0;
-  background: white;
-  border-radius: 4px;
-  transition: width .25s, height .25s;
-}
-
-.sc-jffHpj foreignObject {
-  mask: unset;
-}
-
-.sc-jffHpj circle {
-  display: none;
-}
-
-/* -- server has unread message(s) */
-.sc-jffHpj foreignObject:not(:last-child)::before {
-  width: 8px;
-  height: 8px;
-}
-
-.sc-jffHpj:hover foreignObject::before {
-  width: 8px;
-  height: 20px !important;
-}
-
-/* -- server selected */
-.sc-jffHpj.cebzwO foreignObject::before {
-  width: 8px;
-  height: 30px !important;
-}
-
-.sc-jffHpj,
-.sc-jffHpj > div,
-.sc-jffHpj > div > svg,
-.sc-jffHpj > div > svg > foreignObject:nth-child(2),
-.sc-iNiQyp {
-  overflow: visible;
-}
+.sc-jffHpj foreignObject::before { content: ''; position: absolute; top: 50%; left: -11px; transform: translateY(-50%); display: block; width: 0; height: 0; background: white; border-radius: 4px; transition: width .25s, height .25s; }
+.sc-jffHpj foreignObject { mask: unset; }
+.sc-jffHpj circle { display: none; }
+/* server has unread message(s) */
+.sc-jffHpj foreignObject:not(:last-child)::before { width: 8px; height: 8px; }
+.sc-jffHpj:hover foreignObject::before { width: 8px; height: 20px !important; }
+/* server selected */
+.sc-jffHpj.cebzwO foreignObject::before { width: 8px; height: 30px !important; }
+.sc-jffHpj, .sc-jffHpj > div, .sc-jffHpj > div > svg, .sc-jffHpj > div > svg > foreignObject:nth-child(2), .sc-iNiQyp { overflow: visible; }
 
 /* Edit message dialog changes */
 .bYgUJS textarea { background: #40444B; border-color: #40444B !important; }
 
 /* Typing indicator */
-.sc-daBunf > div {
-    padding-left: 50px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.5" height="7" class="ellipsis-19qdx6 dots-3Bkt3k themed-IQiCm3"><style type="text/css">circle { animation: pulse 1.2s infinite cubic-bezier(0.51, 0.05, 0.51, 0.98); transform: scale(0.85); fill: rgba(255, 255, 255, 0.2); transform-origin: 50% 50%; transform-box: fill-box; } circle:nth-child(2) { animation-delay: 0.12s; } circle:nth-child(3) { animation-delay: 0.24s; } @keyframes pulse { 30% { fill: white; transform: scale(1); } 60% { fill: rgba(255, 255, 255, 0.2); transform: scale(0.85); } }</style><g style="opacity: 1"><circle cx="3.5" cy="3.5" r="3.5" fill="currentColor" style="opacity: 1"></circle><circle cx="12.25" cy="3.5" r="3.5" fill="currentColor" style="opacity: 1"></circle><circle cx="21" cy="3.5" r="3.5" fill="currentColor" style="opacity: 1"></circle></g></svg>');
-    background-position: 10px center;
-    background-repeat: no-repeat;
-    background-size: 30px;
-}
+.sc-daBunf * { background-color: transparent !important; }
+.sc-daBunf { position: absolute; background-color: transparent; width: 100%; top: 100vh; }
+.sc-daBunf > div { padding-left: 50px; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.5" height="7" class="ellipsis-19qdx6 dots-3Bkt3k themed-IQiCm3"><style type="text/css">circle { animation: pulse 1.2s infinite cubic-bezier(0.51, 0.05, 0.51, 0.98); transform: scale(0.85); fill: rgba(255, 255, 255, 0.2); transform-origin: 50% 50%; transform-box: fill-box; } circle:nth-child(2) { animation-delay: 0.12s; } circle:nth-child(3) { animation-delay: 0.24s; } @keyframes pulse { 30% { fill: white; transform: scale(1); } 60% { fill: rgba(255, 255, 255, 0.2); transform: scale(0.85); } }</style><g style="opacity: 1"><circle cx="3.5" cy="3.5" r="3.5" fill="currentColor" style="opacity: 1"></circle><circle cx="12.25" cy="3.5" r="3.5" fill="currentColor" style="opacity: 1"></circle><circle cx="21" cy="3.5" r="3.5" fill="currentColor" style="opacity: 1"></circle></g></svg>'); background-position: 10px center; background-repeat: no-repeat; background-size: 30px; }
