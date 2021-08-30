@@ -49,9 +49,15 @@
 .eQUdeu > div, .llyViG, .UjHkE, .sc-dsXzNU > div { width: calc(100% - 32px); margin-left: 16px; border-top-left-radius: 8px; border-top-right-radius: 8px; }
 
 /* Don't round the top corners of the message bar if an extension is active */
-:not(:empty) + .sc-bTDOke.dXiuJH, /* replies */
-.sc-fXazdy ~ .sc-bTDOke.dXiuJH /* attachments */ 
-{ border-radius: 0 0 8px 8px; }
+/* .sc-bYwzuL = chat, , .sc-dsXzNU = old message indicator, .sc-fXazdy = attachments, div:not(:empty) = replies, .sc-bTDOke.dXiuJH = message bar */
+.sc-bYwzuL ~ .sc-fXazdy,
+.sc-bYwzuL ~ div:not(:empty)>div:first-of-type{ border-radius: 8px 8px 0 0; }
+.sc-bYwzuL ~ .sc-dsXzNU ~ .sc-bTDOke.dXiuJH,
+.sc-bYwzuL ~ .sc-fXazdy ~ .sc-bTDOke.dXiuJH,
+.sc-bYwzuL ~ div:not(:empty) + .sc-bTDOke.dXiuJH{ border-radius: 0 0 8px 8px; }
+.sc-bYwzuL ~ .sc-dsXzNU ~ .sc-fXazdy, 
+.sc-bYwzuL ~ .sc-fXazdy ~ div:not(:empty)>div:first-of-type, 
+.sc-bYwzuL ~ .sc-dsXzNU ~ div:not(:empty)>div:first-of-type { border-radius: 0; }
 
 /* Shadow on server name/badge */
 .sc-eirqVv.dSzotL { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
