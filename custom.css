@@ -45,8 +45,8 @@
 .czAOsy:hover img, .czAOsy:hover div { border-radius: 10px; }
 .cebzwO img, .cebzwO .sc-jNnpgg, .dtmIia img { border-radius: 10px; }
 
-/* Brings typing, reply and upload bars in line with message bar */
-.eQUdeu > div, .llyViG, .UjHkE { margin-left: 16px; margin-right: 16px !important; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+/* Brings typing, reply, upload and old message bars in line with message bar */
+.eQUdeu > div, .llyViG, .UjHkE, .sc-dsXzNU > div { width: calc(100% - 32px); margin-left: 16px; border-top-left-radius: 8px; border-top-right-radius: 8px; }
 
 /* Don't round the top corners of the message bar if an extension is active */
 :not(:empty) + .sc-bTDOke.dXiuJH, /* replies */
