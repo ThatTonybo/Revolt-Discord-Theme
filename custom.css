@@ -17,6 +17,18 @@
   --monospace-font: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace !important;
 }
 
+/* Global color variables */
+:root {
+  --background-floating: #18191c;
+  --interactive-hover: #dcddde;
+  --header-secondary: #b9bbbe;
+  --brand-experiment: hsl(235,85.6%,64.7%);
+  --text-normal: var(--interactive-hover);
+  --background-modifier-hover: rgba(79,84,92,0.16);
+  --green: hsl(139,47.3%,43.9%);
+  --green-hover: hsl(139,47.1%,33.3%);
+}
+
 /* Rounded/floating message bar */
 .sc-bTDOke.dXiuJH { margin: 0 16px 24px; border-radius: 8px; }
 
@@ -100,3 +112,54 @@ div.sc-hOPeYd.eXirsP div.sc-fFSPTT.ehWzcZ svg.StyledIconBase-ea9ulj-0.hPhvO path
 
 /* Fix message box border radius to work with new typing indicator */
 .sc-eKYRIR:not(:nth-child(1)) { border-radius: 0; }
+
+/* Profile modal */
+/* note: not final, could potentionally break other modals */
+.sc-iCoGMd { background-color: var(--background-floating); }
+.sc-gKAaRy { border-radius: 8px; }
+._settings_vku0p_34 ._preview_1a54u_76 { padding-bottom: 20px; }
+.iJHfih { padding: 0; }
+
+/* Profile banner */
+._header_1oux5_8 { width: 600px; height: 240px; background-size: 0, cover; }
+._header_1oux5_8:not([style]) { background-color: var(--brand-experiment); }
+
+/* Profile header */
+._header_1oux5_8>* { width: 100%; }
+._profile_1oux5_21 { padding-top: 172px; }
+
+/* Profile picture */
+._header_1oux5_8 .sc-jrsJWt img { border: solid 2px var(--background-floating); }
+._header_1oux5_8 .sc-jrsJWt { width: 136px; height: 136px; border-radius: 50% 50% 0 0; background-color: var(--background-floating);}
+._header_1oux5_8 .sc-jrsJWt>foreignObject:hover { filter: none; }
+
+/* Status indicator */
+._profile_1oux5_21>.sc-jrsJWt>circle { cy: 25.5px; cx: 25.5px; r: 2.8px; }
+._profile_1oux5_21>.sc-jrsJWt>foreignObject { mask: none; }
+._profile_1oux5_21>.sc-jrsJWt>foreignObject:after { content: ''; display: block; width: 9.5px; height: 9.5px; position: absolute; bottom: 1.7px; right: 1.7px; border-radius: 50%; background: var(--background-floating); }
+
+/* Username and status */
+._details_1oux5_30 { transform: translate(-155px, 98px); }
+._status_1oux5_46 { transform: translateY(8px); color: var(--header-secondary);}
+
+/* Profile tabs */
+._tabs_1oux5_50 { padding-top: 46px; font-weight: 500; border-bottom: solid 1px #262729; }
+._tabs_1oux5_50>div:not([data-active="true"]) { color: var(--interactive-hover) }
+._tabs_1oux5_50>div { padding: 17.5px 0; margin: 0 15px; }
+
+/* Profile information */
+._content_1oux5_70 { max-width: 600px; height: 240px; margin-bottom: 190px; transform: translateY(190px); background-color: var(--background-floating); }
+
+/* Friend request button */
+._profile_1oux5_21 .sc-fFSPTT { width: 0; height: 0; }
+._profile_1oux5_21 .sc-fFSPTT>svg { display: none; }
+._profile_1oux5_21 .sc-fFSPTT:after { content: 'Send Friend Request'; font-weight: 500; font-size: 14px; color: white; background-color: var(--green); padding: 7px 16px; border-radius: 3px; transition: background-color .17s ease,color .17s ease; white-space: nowrap; transform: translate(-147px, 16px); }
+._profile_1oux5_21 div[style]>.sc-fFSPTT:after { content: 'Message'; transform: translate(-81px, 16px); }
+._profile_1oux5_21 .sc-fFSPTT:hover:after { background-color: var(--green-hover); }
+
+/* Mutual Servers */
+._content_1oux5_70 img.sc-kEqXSa.cdoZw { width: 40px; height: 40px; border-radius: 12px; }
+._content_1oux5_70 span { font-weight: 500; color: var(--text-normal); }
+._content_1oux5_70 ._entries_1oux5_113 { gap: 1px; }
+._content_1oux5_70 ._entry_1oux5_122 { padding: 4px; background-color: unset; }
+._content_1oux5_70 ._entry_1oux5_122:hover { background-color: var(--background-modifier-hover); }
