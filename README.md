@@ -1,7 +1,7 @@
 # Revolt Discord Theme
 A theme that aims to skin Revolt to look as close as possible to Discord
 
-<img src="https://i.imgur.com/f2eUtg3.png" />
+<img src="https://i.imgur.com/gX1IniB.png" />
 
 ## Install
 - Open `theme.json` and copy the contents
