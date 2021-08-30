@@ -62,7 +62,7 @@
 .sc-fXazdy, .eQUdeu > div, .llyViG, .UjHkE { background: #2F3136; }
 
 /* Right click menu improvements */
-#Menu.context-menu { background: #23272A !important; }
+#Menu.context-menu { background: var(--background-floating) !important; }
 .context-menu>span:not([data-disabled=true]):hover { background: var(--accent) !important; color: var(--foreground); }
 .context-menu>span:not([data-disabled=true]):active, .context-menu>span:not([data-disabled=true]):focus { background: var(--accent) !important; color: var(--foreground); opacity: 0.8; }
 
