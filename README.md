@@ -16,8 +16,9 @@ If you find any bugs, report them using the [issue tracker](https://github.com/T
 - The typing indicator's margin on the right side of the message box expands too far 
 
 ## Contributors
-- Discord, for the Whitney font and theme colours
+- Discord, for the Whitney font and theme colors
 - Darvi, for providing help with server indicators, and then fixing them as well, as well as the drop shadow code for the top bar
 - c, for the original floating message bar code, and for the code to hide the built-in "wave" server indicator
 - zax, for help with bringing the typing indicator, reply and upload modals in line with the message box
 - Nyan, for the drop shadow on server names
+- Pikachu, for theming ideas and a variety of smaller changes, such as icon sizing, right click menu and buttons using accent color
