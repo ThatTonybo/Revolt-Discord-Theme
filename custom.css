@@ -92,7 +92,7 @@ div.sc-hOPeYd.eXirsP div.sc-fFSPTT.ehWzcZ svg.StyledIconBase-ea9ulj-0.hPhvO path
 .iJjSgu:hover, .eRblbP summary .padding > svg { filter: brightness(140%); }
 
 /* Selected server indicator, unread message indicator and hover styles */
-.sc-jffHpj foreignObject::before { content: ''; position: absolute; top: 50%; left: -11px; transform: translateY(-50%); display: block; width: 0; height: 0; background: white; border-radius: 4px; transition: width .25s, height .25s; }
+.sc-jffHpj foreignObject::before { content: ''; position: absolute; top: 50%; left: -11px; transform: translateY(-50%); display: block; width: .1px; height: .1px; background: white; border-radius: 4px; transition: width .25s, height .25s; }
 .sc-jffHpj foreignObject { mask: unset; }
 .sc-jffHpj circle { display: none; }
 /* server has unread message(s) */
@@ -113,7 +113,7 @@ div.sc-hOPeYd.eXirsP div.sc-fFSPTT.ehWzcZ svg.StyledIconBase-ea9ulj-0.hPhvO path
 /* Fix message box border radius to work with new typing indicator */
 .sc-eKYRIR:not(:nth-child(1)) { border-radius: 0; }
 
-/* Profile modal */
+/* ---------------------Profile modal--------------------- */
 /* note: not final, could potentionally break other modals */
 .sc-iCoGMd { background-color: var(--background-floating); }
 .sc-gKAaRy { border-radius: 8px; }
@@ -163,3 +163,4 @@ div.sc-hOPeYd.eXirsP div.sc-fFSPTT.ehWzcZ svg.StyledIconBase-ea9ulj-0.hPhvO path
 ._content_1oux5_70 ._entries_1oux5_113 { gap: 1px; }
 ._content_1oux5_70 ._entry_1oux5_122 { padding: 4px; background-color: unset; }
 ._content_1oux5_70 ._entry_1oux5_122:hover { background-color: var(--background-modifier-hover); }
+/* ------------------------------------------------------- */
