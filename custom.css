@@ -44,3 +44,24 @@
 /* Shadow on server name/badge */
 .sc-eirqVv.dSzotL { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
 .sc-hhIiOg.elIzZc > div > svg { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
+
+/* Reply and upload modals have the same background colour as the typing indicator */
+.sc-fXazdy, .eQUdeu > div, .llyViG, .UjHkE {
+   background: #2F3136;
+}
+
+/* Right click menu improvements */
+#Menu.context-menu { background: #23272A !important; }
+.context-menu>span:not([data-disabled=true]):hover { background: var(--accent) !important; color: var(--foreground); }
+.context-menu>span:not([data-disabled=true]):active, .context-menu>span:not([data-disabled=true]):focus { background: var(--accent) !important; color: var(--foreground); opacity: 0.8; }
+
+/* User menu icon size adjustment to be equal to Discord */
+.sc-hTRkXV > a:nth-child(2) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1),
+.sc-hTRkXV > a:nth-child(3) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1),
+.sc-hTRkXV > a:nth-child(1) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1) {
+   height: 24px; width: 24px; !important;
+}
+
+/* Edit profile button now uses accent color */
+.sc-bdnxRM { background: var(--accent); transition: 0.2s ease; }
+button.sc-bdnxRM:hover { background: var(--accent); opacity: 0.8; }
