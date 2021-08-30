@@ -24,7 +24,7 @@
     "status-busy": "#ED4245",
     "status-streaming": "#593695",
     "status-invisible": "#A5A5A5",
-    "css": "@import url('https://gitcdn.link/repo/ThatTonybo/Revolt-Discord-Theme/main/custom.css')",
+    "css": "@import url('https://cdn.statically.io/gh/ThatTonybo/Revolt-Discord-Theme/main/custom.css')",
     "monospaceFont": "Space Mono",
     "font": "Inter"
 }
