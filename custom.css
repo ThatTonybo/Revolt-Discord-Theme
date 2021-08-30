@@ -42,7 +42,7 @@
 
 /* Replicates selected server indicator */
 .czAOsy img, .czAOsy div { border-radius: 50%; transition: 0.25s ease; }
-.czAOsy img:hover, .czAOsy div:hover { border-radius: 10px; }
+.czAOsy:hover img, .czAOsy:hover div { border-radius: 10px; }
 .cebzwO img, .cebzwO .sc-jNnpgg, .dtmIia img { border-radius: 10px; }
 
 /* Brings typing, reply and upload bars in line with message bar */
