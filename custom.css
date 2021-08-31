@@ -70,6 +70,10 @@ button.dvKiPb:hover { background: var(--accent); opacity: 0.8; }
 ._settings_vku0p_34 ._sidebar_vku0p_40 ._donate_vku0p_124 { color: #848484 !important; }
 ._settings_vku0p_34 ._sidebar_vku0p_40 ._donate_vku0p_124:hover { color: #F6F6F6 !important; }
 
+/* Make user and channel mentions match Discord */
+._markdown_8b8eo_2 a[data-type="mention"], ._markdown_8b8eo_2 a[href*="/server/"][href*="/channel/"]:not([href*="https://"]) { border-radius: 3px; padding: 0 2px; background-color: #5856f253; color: #DEE0FC; font-weight: 500; text-decoration: none; transition: none; }
+._markdown_8b8eo_2 a[data-type="mention"]:hover, ._markdown_8b8eo_2 a[href*="/server/"][href*="/channel/"]:not([href*="https://"]):hover { background-color: #5856f2; }
+
 /* --------------------- Input-Related Changes --------------------- */
 
 /* Brings typing, reply, upload and old message bars in line with message bar */
