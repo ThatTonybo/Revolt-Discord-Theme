@@ -1,6 +1,8 @@
 # Revolt Discord Theme
 A theme that aims to skin Revolt to look as close as possible to Discord
 
+> **Temporary Disclaimer:** The most recent client update has forced most theme changes to break. We (contributors and myself) are working to fix these as soon as possible.
+
 <img src="https://i.imgur.com/gX1IniB.png" />
 
 ## Install
