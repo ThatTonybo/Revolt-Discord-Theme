@@ -29,7 +29,7 @@
 }
 
 /* Rounded/floating message bar */
-.sc-bTDOke.dXiuJH { margin: 0 16px 24px; border-radius: 8px; }
+.sc-bTvSiT.eOldEY { margin: 0 16px 24px; border-radius: 8px; }
 
 /* Shadow on edge of top bar */
 .sc-hhIiOg { box-shadow:rgba(4, 4, 5, 0.2) 0px 1px 0px 0px, rgba(6, 6, 7, 0.05) 0px 1.5px 0px 0px, rgba(4, 4, 5, 0.05) 0px 2px 0px 0px; z-index: 1; }
@@ -46,18 +46,18 @@
 .cebzwO img, .cebzwO .sc-jNnpgg, .dtmIia img { border-radius: 10px; }
 
 /* Brings typing, reply, upload and old message bars in line with message bar */
-.eQUdeu > div, .llyViG, .UjHkE, .sc-dsXzNU > div { width: calc(100% - 32px); margin-left: 16px; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+.hknDwm > div, .bFgmUk, .efWZIo, .sc-dtwnrN > div { width: calc(100% - 32px); margin-left: 16px; border-top-left-radius: 8px; border-top-right-radius: 8px; }
 
 /* Don't round the top corners of the message bar if an extension is active */
-/* .sc-bYwzuL = chat, , .sc-dsXzNU = old message indicator, .sc-fXazdy = attachments, div:not(:empty) = replies, .sc-bTDOke.dXiuJH = message bar */
-.sc-bYwzuL ~ .sc-fXazdy,
-.sc-bYwzuL ~ div:not(:empty)>div:first-of-type{ border-radius: 8px 8px 0 0; }
-.sc-bYwzuL ~ .sc-dsXzNU ~ .sc-bTDOke.dXiuJH,
-.sc-bYwzuL ~ .sc-fXazdy ~ .sc-bTDOke.dXiuJH,
-.sc-bYwzuL ~ div:not(:empty) + .sc-bTDOke.dXiuJH{ border-radius: 0 0 8px 8px; }
-.sc-bYwzuL ~ .sc-dsXzNU ~ .sc-fXazdy, 
-.sc-bYwzuL ~ .sc-fXazdy ~ div:not(:empty)>div:first-of-type, 
-.sc-bYwzuL ~ .sc-dsXzNU ~ div:not(:empty)>div:first-of-type { border-radius: 0; }
+/* .sc-fbNZge.cSZYKt = chat area, .sc-dtwnrN = old message indicator, .sc-fWSDcn = attachments, div:not(:empty):not(.sc-iJuVqt) = replies, .sc-bTvSiT.eOldEY = message bar */
+.sc-fbNZge.cSZYKt > .sc-fWSDcn,
+.sc-fbNZge.cSZYKt > div:not(:empty):not(.sc-iJuVqt) > div:first-of-type { border-radius: 8px 8px 0 0; }
+.sc-fbNZge.cSZYKt > .sc-dtwnrN ~ .sc-bTvSiT.eOldEY,
+.sc-fbNZge.cSZYKt > .sc-fWSDcn ~ .sc-bTvSiT.eOldEY,
+.sc-fbNZge.cSZYKt > div:not(:empty):not(.sc-iJuVqt) + .sc-bTvSiT.eOldEY { border-radius: 0 0 8px 8px; }
+.sc-fbNZge.cSZYKt > .sc-dtwnrN ~ .sc-fWSDcn, 
+.sc-fbNZge.cSZYKt > .sc-fWSDcn ~ div:not(:empty):not(.sc-iJuVqt) > div:first-of-type, 
+.sc-fbNZge.cSZYKt > .sc-dtwnrN ~ div:not(:empty):not(.sc-iJuVqt) > div:first-of-type { border-radius: 0; }
 
 /* Shadow on server name/badge */
 .sc-eirqVv.dSzotL { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
@@ -119,29 +119,29 @@ div.sc-hOPeYd.eXirsP div.sc-fFSPTT.ehWzcZ svg.StyledIconBase-ea9ulj-0.hPhvO path
 
 /* ---------------------Profile modal--------------------- */
 /* note: not final, could potentionally break other modals */
-.sc-iCoGMd { background-color: var(--background-floating); }
-.sc-gKAaRy { border-radius: 8px; }
+.sc-iBPTik { background-color: var(--background-floating); }
+.sc-gKseQn { border-radius: 8px; }
 ._settings_vku0p_34 ._preview_1a54u_76 { padding-bottom: 20px; }
-._settings_vku0p_34 ._preview_1a54u_76 .sc-iCoGMd { min-width: 600px; }
-.iJHfih { padding: 0; }
+._settings_vku0p_34 ._preview_1a54u_76 .sc-iBPTik { min-width: 600px; }
+.cDSLoO { padding: 0; }
 
 /* Profile banner */
 ._header_1oux5_8 { width: 600px; height: 240px; background-size: 0, cover; }
 ._header_1oux5_8:not([style]) { background-color: var(--accent); }
 
 /* Profile header */
-._header_1oux5_8>* { width: 100%; }
+._header_1oux5_8 > * { width: 100%; }
 ._profile_1oux5_21 { padding-top: 172px; }
 
 /* Profile picture */
-._header_1oux5_8 .sc-jrsJWt img { border: solid 2px var(--background-floating); }
-._header_1oux5_8 .sc-jrsJWt { width: 136px; height: 136px; border-radius: 50% 50% 0 0; background-color: var(--background-floating);}
-._header_1oux5_8 .sc-jrsJWt>foreignObject:hover { filter: none; }
+._header_1oux5_8 .sc-jrAFXE img { border: solid 2px var(--background-floating); }
+._header_1oux5_8 .sc-jrAFXE { width: 136px; height: 136px; border-radius: 50% 50% 0 0; background-color: var(--background-floating);}
+._header_1oux5_8 .sc-jrAFXE > foreignObject:hover { filter: none; }
 
 /* Status indicator */
-._profile_1oux5_21>.sc-jrsJWt>circle { cy: 25.5px; cx: 25.5px; r: 2.8px; }
-._profile_1oux5_21>.sc-jrsJWt>foreignObject { mask: none; }
-._profile_1oux5_21>.sc-jrsJWt>foreignObject:after { content: ''; display: block; width: 9.5px; height: 9.5px; position: absolute; bottom: 1.7px; right: 1.7px; border-radius: 50%; background: var(--background-floating); }
+._profile_1oux5_21 > .sc-jrAFXE>circle { cy: 25.5px; cx: 25.5px; r: 2.8px; }
+._profile_1oux5_21 > .sc-jrAFXE>foreignObject { mask: none; }
+._profile_1oux5_21 > .sc-jrAFXE>foreignObject:after { content: ''; display: block; width: 9.5px; height: 9.5px; position: absolute; bottom: 1.7px; right: 1.7px; border-radius: 50%; background: var(--background-floating); }
 
 /* Username and status */
 ._details_1oux5_30 { transform: translate(-155px, 98px); }
@@ -149,21 +149,21 @@ div.sc-hOPeYd.eXirsP div.sc-fFSPTT.ehWzcZ svg.StyledIconBase-ea9ulj-0.hPhvO path
 
 /* Profile tabs */
 ._tabs_1oux5_50 { padding-top: 46px; font-weight: 500; border-bottom: solid 1px #262729; }
-._tabs_1oux5_50>div:not([data-active="true"]) { color: var(--interactive-hover) }
-._tabs_1oux5_50>div { padding: 17.5px 0; margin: 0 15px; }
+._tabs_1oux5_50 > div:not([data-active="true"]) { color: var(--interactive-hover) }
+._tabs_1oux5_50 > div { padding: 17.5px 0; margin: 0 15px; }
 
 /* Profile information */
 ._content_1oux5_70 { max-width: 600px; height: 240px; margin-bottom: 190px; transform: translateY(190px); background-color: var(--background-floating); }
 
 /* Friend request button */
-._profile_1oux5_21 .sc-fFSPTT { width: 0; height: 0; }
-._profile_1oux5_21 .sc-fFSPTT>svg { display: none; }
-._profile_1oux5_21 .sc-fFSPTT:after { content: 'Send Friend Request'; font-weight: 500; font-size: 14px; color: white; background-color: var(--green); padding: 7px 16px; border-radius: 3px; transition: background-color .17s ease,color .17s ease; white-space: nowrap; transform: translate(-147px, 16px); }
-._profile_1oux5_21 div[style]>.sc-fFSPTT:after { content: 'Message'; transform: translate(-81px, 16px); }
-._profile_1oux5_21 .sc-fFSPTT:hover:after { background-color: var(--green-hover); }
+._profile_1oux5_21 .sc-fFucqa { width: 0; height: 0; }
+._profile_1oux5_21 .sc-fFucqa > svg { display: none; }
+._profile_1oux5_21 .sc-fFucqa:after { content: 'Send Friend Request'; font-weight: 500; font-size: 14px; color: white; background-color: var(--green); padding: 7px 16px; border-radius: 3px; transition: background-color .17s ease,color .17s ease; white-space: nowrap; transform: translate(-147px, 16px); }
+._profile_1oux5_21 div[style] > .sc-fFucqa:after { content: 'Message'; transform: translate(-81px, 16px); }
+._profile_1oux5_21 .sc-fFucqa:hover:after { background-color: var(--green-hover); }
 
 /* Mutual Servers */
-._content_1oux5_70 img.sc-kEqXSa.cdoZw { width: 40px; height: 40px; border-radius: 12px; }
+._content_1oux5_70 img.sc-kEjbQP.jJqOer { width: 40px; height: 40px; border-radius: 12px; }
 ._content_1oux5_70 span { font-weight: 500; color: var(--text-normal); }
 ._content_1oux5_70 ._entries_1oux5_113 { gap: 1px; }
 ._content_1oux5_70 ._entry_1oux5_122 { padding: 4px; background-color: unset; }
