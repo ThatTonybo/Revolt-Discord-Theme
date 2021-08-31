@@ -29,7 +29,7 @@
 }
 
 /* Rounded/floating message bar */
-.sc-bTDOke.dXiuJH { margin: 0 16px 24px; border-radius: 8px; }
+.sc-bTvSiT.eOldEY { margin: 0 16px 24px; border-radius: 8px; }
 
 /* Shadow on edge of top bar */
 .sc-hhIiOg { box-shadow:rgba(4, 4, 5, 0.2) 0px 1px 0px 0px, rgba(6, 6, 7, 0.05) 0px 1.5px 0px 0px, rgba(4, 4, 5, 0.05) 0px 2px 0px 0px; z-index: 1; }
@@ -46,18 +46,18 @@
 .cebzwO img, .cebzwO .sc-jNnpgg, .dtmIia img { border-radius: 10px; }
 
 /* Brings typing, reply, upload and old message bars in line with message bar */
-.eQUdeu > div, .llyViG, .UjHkE, .sc-dsXzNU > div { width: calc(100% - 32px); margin-left: 16px; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+.hknDwm > div, .bFgmUk, .efWZIo, .sc-dtwnrN > div { width: calc(100% - 32px); margin-left: 16px; border-top-left-radius: 8px; border-top-right-radius: 8px; }
 
 /* Don't round the top corners of the message bar if an extension is active */
-/* .sc-bYwzuL = chat, , .sc-dsXzNU = old message indicator, .sc-fXazdy = attachments, div:not(:empty) = replies, .sc-bTDOke.dXiuJH = message bar */
-.sc-bYwzuL ~ .sc-fXazdy,
-.sc-bYwzuL ~ div:not(:empty)>div:first-of-type{ border-radius: 8px 8px 0 0; }
-.sc-bYwzuL ~ .sc-dsXzNU ~ .sc-bTDOke.dXiuJH,
-.sc-bYwzuL ~ .sc-fXazdy ~ .sc-bTDOke.dXiuJH,
-.sc-bYwzuL ~ div:not(:empty) + .sc-bTDOke.dXiuJH{ border-radius: 0 0 8px 8px; }
-.sc-bYwzuL ~ .sc-dsXzNU ~ .sc-fXazdy, 
-.sc-bYwzuL ~ .sc-fXazdy ~ div:not(:empty)>div:first-of-type, 
-.sc-bYwzuL ~ .sc-dsXzNU ~ div:not(:empty)>div:first-of-type { border-radius: 0; }
+/* .sc-fbNZge.cSZYKt = chat area, .sc-dtwnrN = old message indicator, .sc-fWSDcn = attachments, div:not(:empty):not(.sc-iJuVqt) = replies, .sc-bTvSiT.eOldEY = message bar */
+.sc-fbNZge.cSZYKt > .sc-fWSDcn,
+.sc-fbNZge.cSZYKt > div:not(:empty):not(.sc-iJuVqt) > div:first-of-type { border-radius: 8px 8px 0 0; }
+.sc-fbNZge.cSZYKt > .sc-dtwnrN ~ .sc-bTvSiT.eOldEY,
+.sc-fbNZge.cSZYKt > .sc-fWSDcn ~ .sc-bTvSiT.eOldEY,
+.sc-fbNZge.cSZYKt > div:not(:empty):not(.sc-iJuVqt) + .sc-bTvSiT.eOldEY { border-radius: 0 0 8px 8px; }
+.sc-fbNZge.cSZYKt > .sc-dtwnrN ~ .sc-fWSDcn, 
+.sc-fbNZge.cSZYKt > .sc-fWSDcn ~ div:not(:empty):not(.sc-iJuVqt) > div:first-of-type, 
+.sc-fbNZge.cSZYKt > .sc-dtwnrN ~ div:not(:empty):not(.sc-iJuVqt) > div:first-of-type { border-radius: 0; }
 
 /* Shadow on server name/badge */
 .sc-eirqVv.dSzotL { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
