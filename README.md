@@ -3,8 +3,6 @@
 
 <img src="https://i.imgur.com/Mkv7dGL.png" align="center" />
 
-> **Temporary Disclaimer:** The most recent client update has forced most theme changes to break. We (contributors and myself) are working to fix these as soon as possible.
-
 ## Install
 - Open `dist/theme.json` and copy the contents
 - Go to Settings -> Appearance -> Advanced Options and click the small "Import a theme" button
