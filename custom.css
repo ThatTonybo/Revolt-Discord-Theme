@@ -104,7 +104,7 @@ background: var(--primary-header); color: #3BA55D; border-radius: 50%; transitio
 
 /* Attach file button circle */
 .sc-hOqruk.jqGkHP > .sc-fFucqa.gqHeVJ svg { background: var(--secondary-foreground); border-radius: 50%; height: 20px; width: 20px; margin-left: 10px; }
-.sc-hOqruk.jqGkHP > .sc-fFucqa.gqHeVJ:hover > .StyledIconBase-ea9ulj-0.hPhvO { filter: brightness(120%); }
+.sc-hOqruk.jqGkHP > .sc-fFucqa.gqHeVJ:hover > .StyledIconBase-ea9ulj-0 { filter: brightness(120%); }
 .sc-hOqruk.jqGkHP > .sc-fFucqa.gqHeVJ svg path { color: var(--message-box); }
 
 /* --------------------- Server Indicators --------------------- */
