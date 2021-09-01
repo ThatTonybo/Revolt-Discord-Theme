@@ -1,0 +1,24 @@
+/* Adds Discord typing indicator animation */
+.sc-dacGJm {
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  top: 100vh;
+
+  * {
+    background-color: transparent !important;
+  }
+
+  & > div {
+    padding-left: 50px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQuNSIgaGVpZ2h0PSI3IiBjbGFzcz0iZWxsaXBzaXMtMTlxZHg2IGRvdHMtM0JrdDNrIHRoZW1lZC1JUWlDbTMiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Y2lyY2xlIHsgYW5pbWF0aW9uOiBwdWxzZSAxLjJzIGluZmluaXRlIGN1YmljLWJlemllcigwLjUxLCAwLjA1LCAwLjUxLCAwLjk4KTsgdHJhbnNmb3JtOiBzY2FsZSgwLjg1KTsgZmlsbDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjIpOyB0cmFuc2Zvcm0tb3JpZ2luOiA1MCUgNTAlOyB0cmFuc2Zvcm0tYm94OiBmaWxsLWJveDsgfSBjaXJjbGU6bnRoLWNoaWxkKDIpIHsgYW5pbWF0aW9uLWRlbGF5OiAwLjEyczsgfSBjaXJjbGU6bnRoLWNoaWxkKDMpIHsgYW5pbWF0aW9uLWRlbGF5OiAwLjI0czsgfSBAa2V5ZnJhbWVzIHB1bHNlIHsgMzAlIHsgZmlsbDogd2hpdGU7IHRyYW5zZm9ybTogc2NhbGUoMSk7IH0gNjAlIHsgZmlsbDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjIpOyB0cmFuc2Zvcm06IHNjYWxlKDAuODUpOyB9IH08L3N0eWxlPjxnIHN0eWxlPSJvcGFjaXR5OiAxIj48Y2lyY2xlIGN4PSIzLjUiIGN5PSIzLjUiIHI9IjMuNSIgZmlsbD0iY3VycmVudENvbG9yIiBzdHlsZT0ib3BhY2l0eTogMSI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMTIuMjUiIGN5PSIzLjUiIHI9IjMuNSIgZmlsbD0iY3VycmVudENvbG9yIiBzdHlsZT0ib3BhY2l0eTogMSI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjEiIGN5PSIzLjUiIHI9IjMuNSIgZmlsbD0iY3VycmVudENvbG9yIiBzdHlsZT0ib3BhY2l0eTogMSI+PC9jaXJjbGU+PC9nPjwvc3ZnPg==');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+  }
+}
+
+/* Fix message box border radius to work with new typing indicator */
+.sc-bTvSiT .eOldEY:not(:nth-child(1)) {
+  border-radius: 0;
+}

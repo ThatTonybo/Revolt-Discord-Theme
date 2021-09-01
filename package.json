@@ -1,0 +1,30 @@
+{
+  "name": "revolt-discord-theme",
+  "version": "1.0.0",
+  "description": "A theme that aims to skin Revolt to look as close as possible to Discord",
+  "author": "ThatTonybo",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:css && npm run build:json",
+    "build:css": "postcss src/index.sass -o dist/theme.css",
+    "build:json": "node scripts/buildJSON",
+    "dev": "npm run build -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThatTonybo/Revolt-Discord-Theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ThatTonybo/Revolt-Discord-Theme/issues"
+  },
+  "homepage": "https://github.com/ThatTonybo/Revolt-Discord-Theme#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.3.3",
+    "cssnano": "^5.0.8",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "postcss-csso": "^5.0.1",
+    "precss": "^4.0.0",
+    "prettier": "^2.3.2"
+  }
+}
