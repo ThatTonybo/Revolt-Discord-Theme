@@ -1,0 +1,28 @@
+name: Dry-run Build
+on:
+  pull_request:
+    paths:
+      - "src/**"
+      - "package.json"
+      - ".github/workflows/dryrun.yml"
+  workflow_dispatch:
+
+jobs:
+  dryrun:
+    name: Dry-run build
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Dry-run build
+        run: npm run build:json

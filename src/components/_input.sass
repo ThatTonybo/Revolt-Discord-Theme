@@ -1,0 +1,75 @@
+/* Brings typing, reply, upload and old message bars in line with message bar */
+.hknDwm > div, .bFgmUk, .efWZIo, .sc-dtwnrN > div {
+  width: calc(100% - 32px);
+  margin-left: 16px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Reply upload and viewing old message bars now use accurate colors */
+.efWZIo, .bFgmUk {
+  background: #2F3136;
+}
+.kWnCnh > div {
+  background: #4E535A;
+  color: white;
+}
+
+/* Don't round the top corners of the message bar if an extension is active */
+/* Guide: .sc-fbNZge.cSZYKt = chat area, .sc-dtwnrN = old message indicator, .sc-fWSDcn = attachments, div:not(:empty):not(.sc-iJuVqt) = replies, .sc-bTvSiT.eOldEY = message bar */
+.sc-fbNZge.cSZYKt {
+  & > .sc-fWSDcn,
+  & > div:not(:empty):not(.sc-iJuVqt) > div:first-of-type {
+    border-radius: 8px 8px 0 0;
+  }
+
+  & > .sc-dtwnrN ~ .sc-bTvSiT.eOldEY,
+  & > .sc-fWSDcn ~ .sc-bTvSiT.eOldEY,
+  & > div:not(:empty):not(.sc-iJuVqt) + .sc-bTvSiT.eOldEY {
+    border-radius: 0 0 8px 8px;
+  }
+
+  & > .sc-dtwnrN ~ .sc-fWSDcn,
+  & > .sc-fWSDcn ~ div:not(:empty):not(.sc-iJuVqt) > div:first-of-type,
+  & > .sc-dtwnrN ~ div:not(:empty):not(.sc-iJuVqt) > div:first-of-type {
+    border-radius: 0;
+  }
+}
+
+/* Move input box to the right to allow for upload button spacing */
+.eOldEY textarea {
+  margin-left: 10px;
+}
+
+/* Server create button circle */
+.sc-iNqMzA.gmzsyz > .sc-fFucqa.gqHeVJ svg {
+  background: var(--primary-header);
+  color: #3BA55D;
+  border-radius: 50%;
+  transition: 0.25s ease;
+
+  &:hover {
+    border-radius: 10px;
+    transition: 0.2s ease;
+    background: #3BA55D;
+    color: white;
+  }
+}
+
+/* Attach file button circle */
+.sc-hOqruk.jqGkHP > .sc-fFucqa.gqHeVJ {
+  svg {
+    background: var(--secondary-foreground);
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+
+    path {
+      color: var(--message-box);
+    }
+  }
+  &:hover > .StyledIconBase-ea9ulj-0 {
+    filter: brightness(120%);
+  }
+}
