@@ -13,7 +13,7 @@
 If you find any bugs, report them using the [issue tracker](https://github.com/ThatTonybo/Revolt-Discord-Theme/issues)
 
 ### Known Bugs
-- Typing indicator goes off screen on mobile
+None at the present moment!
 
 ## Contributors
 Thanks to all the wonderful people below, that have contributed their time, work and effort into the theme.
