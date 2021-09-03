@@ -25,6 +25,21 @@
 }
 .sc-jeGTLq circle {
   display: none;
+
+  /* Pings */
+  &[fill="var(--error)"] {
+    display: block;
+    cx: 26px;
+    cy: 26px;
+    r: 7px;
+    stroke: var(--background);
+    stroke-width: 3px;
+
+    & + text {
+      font-weight: 600;
+      transform: translate(-1px, 23px);
+    }
+  }
 }
 
 /* server has unread message(s) */
