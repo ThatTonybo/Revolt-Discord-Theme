@@ -1,5 +1,5 @@
 /* Brings typing, reply, upload and old message bars in line with message bar */
-.hknDwm > div, .bFgmUk, .efWZIo, .sc-dtwnrN > div {
+.sc-bYEvvW ~ * {
   width: calc(100% - 32px);
   margin-left: 16px;
   border-top-left-radius: 8px;
@@ -7,31 +7,40 @@
 }
 
 /* Reply upload and viewing old message bars now use accurate colors */
-.efWZIo, .bFgmUk {
-  background: #2F3136;
+.ohaep, .jVIclB {
+  background: var(--background-tertiary);
 }
-.kWnCnh > div {
-  background: #4E535A;
+.dFtsAb > div {
+  background: var(--background-accent);
   color: white;
+  opacity: 0.95;
+  & > div {
+      &:first-of-type {
+        font-weight: 500;
+      }
+      &:last-of-type {
+        font-weight: 600;
+      }
+  }
 }
 
 /* Don't round the top corners of the message bar if an extension is active */
-/* Guide: .sc-fbNZge.cSZYKt = chat area, .sc-dtwnrN = old message indicator, .sc-fWSDcn = attachments, div:not(:empty):not(.sc-iJuVqt) = replies, .sc-bTvSiT.eOldEY = message bar */
-.sc-fbNZge.cSZYKt {
-  & > .sc-fWSDcn,
+/* Guide: .sc-eGCaLh.kxfHSv = chat area, .sc-fvhFOF = old message indicator, .sc-aemIz = attachments, div:not(:empty):not(.sc-iJuVqt) = replies, .sc-dacGJm.dneKvo = message bar */
+.sc-eGCaLh.kxfHSv {
+  & > .sc-aemIz,
   & > div:not(:empty):not(.sc-iJuVqt) > div:first-of-type {
     border-radius: 8px 8px 0 0;
   }
 
-  & > .sc-dtwnrN ~ .sc-bTvSiT.eOldEY,
-  & > .sc-fWSDcn ~ .sc-bTvSiT.eOldEY,
-  & > div:not(:empty):not(.sc-iJuVqt) + .sc-bTvSiT.eOldEY {
+  & > .sc-fvhFOF ~ .sc-dacGJm.dneKvo,
+  & > .sc-aemIz ~ .sc-dacGJm.dneKvo,
+  & > div:not(:empty):not(.sc-iJuVqt) + .sc-dacGJm.dneKvo {
     border-radius: 0 0 8px 8px;
   }
 
-  & > .sc-dtwnrN ~ .sc-fWSDcn,
-  & > .sc-fWSDcn ~ div:not(:empty):not(.sc-iJuVqt) > div:first-of-type,
-  & > .sc-dtwnrN ~ div:not(:empty):not(.sc-iJuVqt) > div:first-of-type {
+  & > .sc-fvhFOF ~ .sc-aemIz,
+  & > .sc-aemIz ~ div:not(:empty):not(.sc-iJuVqt) > div:first-of-type,
+  & > .sc-fvhFOF ~ div:not(:empty):not(.sc-iJuVqt) > div:first-of-type {
     border-radius: 0;
   }
 }
