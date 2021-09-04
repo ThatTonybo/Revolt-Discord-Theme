@@ -1,3 +1,6 @@
+> ⚠️ **Here be dragons!**
+> The most recent update has causes the theme to break. Please bear with us as we work to fix it.
+
 <h1 align="center">Revolt Discord Theme</h1>
 <p align="center">A theme that aims to skin Revolt to look as close as possible to Discord</p>
 
