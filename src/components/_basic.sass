@@ -93,7 +93,18 @@
 }
 
 /* Add orange marker to the left of pinged messages */
-.CaijV {
-    border-left: 2px solid orange;
+.CaijV, .cCwoWr {
+    border-left: 2px solid var(--info-warning-foreground);
     padding-left: 0;
+}
+
+/* More accurate background colors for individual messages */
+.dajneY:hover, .bFCPmG:hover {
+  background-color: var(--background-message-hover);
+}
+.CaijV, .cCwoWr {
+  background-color: var(--background-mentioned);
+  &:hover {
+    background-color: var(--background-mentioned-hover);
+  }
 }
