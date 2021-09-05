@@ -7,8 +7,9 @@
 <img src="https://i.imgur.com/Mkv7dGL.png" align="center" />
 
 ## Install
-- Open `dist/theme.json` and copy the contents
-- Go to Settings -> Appearance -> Advanced Options and click the small "Import a theme" button
+- Open `dist/theme.json` and copy the contents to clipboard.
+- Go to `Settings -> Appearance -> Theme Overrides` and click the small "Import a theme" button to the right of the first text box. This will import your theme **from your clipboard**, make sure you have it copied and have allowed Revolt to read your clipboard.
+![](https://get.snaz.in/3ynWjJc.png)
 
 ## Bugs
 > At this time, Revolt does not have [consistent class naming](https://github.com/revoltchat/revite/issues/149), meaning that themes may partially break at any time
