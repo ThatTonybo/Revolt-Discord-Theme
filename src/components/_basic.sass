@@ -61,12 +61,6 @@ nav summary .padding > * {
   }
 }
 
-/* Edit message dialog changes */
-main [role="feed"] article textarea {
-  background: #40444B;
-  border-color: #40444B !important;
-}
-
 /* Make donate link in settings standard with the rest of the colors */
 /* The duplicate attribute selectors are just to get around CSS specificity issues */
 main nav a[href="https://insrt.uk/donate"][href][href] > button {
@@ -76,38 +70,47 @@ main nav a[href="https://insrt.uk/donate"][href][href] > button {
   }
 }
 
-/* Make user and channel mentions match Discord */
-main [role="feed"] article a[data-type="mention"],
-main [role="feed"] article a[href*="/server/"][href*="/channel/"]:not([href*="https://"]) {
-  border-radius: 3px;
-  padding: 0 2px;
-  background-color: #5856f253;
-  color: #DEE0FC;
-  font-weight: 500;
-  text-decoration: none;
-  transition: none;
+main [role="feed"] article {
+  /* Edit message dialog changes */
+  textarea {
+    background: #40444B;
+    border-color: #40444B !important;
+  }
 
+  /* Make user and channel mentions match Discord */
+  a[data-type="mention"],
+  a[href*="/server/"][href*="/channel/"]:not([href*="https://"]) {
+    border-radius: 3px;
+    padding: 0 2px;
+    background-color: #5856f253;
+    color: #DEE0FC;
+    font-weight: 500;
+    text-decoration: none;
+    transition: none;
+
+    &:hover {
+      background-color: #5856f2;
+    }
+  }
+
+  /* Add orange marker to the left of pinged messages */
+  &[role="alert"] {
+      border-left: 2px solid var(--info-warning-foreground);
+      padding-left: 0;
+  }
+
+  /* More accurate background colors for individual messages */
   &:hover {
-    background-color: #5856f2;
+    background-color: var(--background-message-hover);
+  }
+  &[role="alert"]:hover {
+    background-color: var(--background-mentioned);
+    &:hover {
+      background-color: var(--background-mentioned-hover);
+    }
   }
 }
 
-/* Add orange marker to the left of pinged messages */
-main [role="feed"] article[role="alert"] {
-    border-left: 2px solid var(--info-warning-foreground);
-    padding-left: 0;
-}
-
-/* More accurate background colors for individual messages */
-main [role="feed"] article:hover {
-  background-color: var(--background-message-hover);
-}
-main [role="feed"] article[role="alert"]:hover {
-  background-color: var(--background-mentioned);
-  &:hover {
-    background-color: var(--background-mentioned-hover);
-  }
-}
 @keyframes fGHvAw {
     from {
         background-color: var(--background-message-flash);
