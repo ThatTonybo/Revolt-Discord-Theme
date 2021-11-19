@@ -53,12 +53,12 @@ nav > div:nth-child(2) > div > a > button > div > svg {
 }*/
 
 /* Change color of category headings to match Discord, fix hover styling */
-.fMAmuP,
-nav summary .padding > svg {
+nav summary .padding > * {
   color: rgb(142, 146, 151);
-}
-nav summary .padding:hover > * {
-  filter: brightness(140%);
+
+  &:hover {
+    filter: brightness(140%);
+  }
 }
 
 /* Edit message dialog changes */
