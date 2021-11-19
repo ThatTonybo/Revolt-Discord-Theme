@@ -93,16 +93,16 @@ main [role="feed"] article a[href*="/server/"][href*="/channel/"]:not([href*="ht
 }
 
 /* Add orange marker to the left of pinged messages */
-.CaijV, .cCwoWr {
+main [role="feed"] article[role="alert"] {
     border-left: 2px solid var(--info-warning-foreground);
     padding-left: 0;
 }
 
 /* More accurate background colors for individual messages */
-.dajneY:hover, .bFCPmG:hover, .fNoJBP:hover {
+main [role="feed"] article:hover {
   background-color: var(--background-message-hover);
 }
-.CaijV, .cCwoWr {
+main [role="feed"] article[role="alert"]:hover {
   background-color: var(--background-mentioned);
   &:hover {
     background-color: var(--background-mentioned-hover);
