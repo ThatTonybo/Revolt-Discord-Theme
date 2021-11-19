@@ -2,20 +2,34 @@
 
 .sc-iBPTik { background-color: var(--background-floating); }
 .sc-gKseQn { border-radius: 8px; }
-._settings_vku0p_34 ._preview_1a54u_76 { padding-bottom: 20px; }
-._settings_vku0p_34 ._preview_1a54u_76 .sc-iBPTik { min-width: 600px; }
-.cDSLoO { padding: 0; }
+._settings_vku0p_34 ._preview_14xwh_76 {
+padding-bottom: 20px;
+  & > .sc-iBPTik {
+    min-width: 600px;
+  }
+}
+.cDSLoO {
+  padding: 0;
+}
 
 /* Profile banner */
-._header_1oux5_8 { width: min(600px, calc(100vw - 16px)); height: min(240px, calc((100vw - 16px)/2.5)); background-size: 0, cover; }
-._header_1oux5_8:not([style]) { background-color: var(--accent); }
+._header_jxnjw_8 {
+  width: min(600px, calc(100vw - 16px));
+  height: min(240px, calc((100vw - 16px)/2.5));
+  background-size: 0, cover;
+  &:not([style]) {
+    background-color: var(--accent);
+  }
+  & > * {
+    width: 100%;
+  }
+}
 
 /* Profile header */
-._header_1oux5_8 > * { width: 100%; }
-._profile_1oux5_21 { padding-top: min(172px, calc((100vw - 16px)/2.5 - 68px)); }
+._profile_jxnjw_21 { padding-top: min(172px, calc((100vw - 16px)/2.5 - 68px)); }
 
 /* Profile picture */
-._header_1oux5_8 .sc-jrAFXE {
+._header_jxnjw_8 .sc-jrAFXE {
   width: 136px;
   height: 136px;
   border-radius: 50% 50% 0 0;
@@ -31,7 +45,7 @@
 }
 
 /* Status indicator */
-._profile_1oux5_21 > .sc-jrAFXE {
+._profile_jxnjw_21 > .sc-jrAFXE {
   & > circle {
     cy: 25.5px;
     cx: 25.5px;
@@ -55,17 +69,17 @@
 }
 
 /* Username and status */
-._details_1oux5_30 {
+._details_jxnjw_30 {
   transform: translate(-155px, 98px);
   flex-shrink: 0;
 }
-._status_1oux5_46 {
+._status_jxnjw_46 {
   transform: translateY(8px);
   color: var(--header-secondary);
 }
 
 /* Profile tabs */
-._tabs_1oux5_50 {
+._tabs_jxnjw_50 {
   padding-top: 46px;
   font-weight: 500;
   border-bottom: solid 1px #262729;
@@ -82,7 +96,7 @@
 }
 
 /* Profile information */
-._content_1oux5_70 {
+._content_jxnjw_70 {
   max-width: 600px;
   height: max(200px, calc((100vw - 16px)/2.5));
   margin-bottom: 190px;
@@ -91,7 +105,7 @@
 }
 
 /* Friend request button */
-._profile_1oux5_21 {
+._profile_jxnjw_21 {
   .sc-fFucqa {
     width: 0;
     height: 0;
@@ -120,20 +134,20 @@
 }
 
 /* Mutual Servers */
-._content_1oux5_70 {
-  img.sc-kEjbQP.jJqOer {
-    width: 40px;
-    height: 40px;
+._content_jxnjw_70 {
+  img.sc-kEjbQP.eKXCRL, div.sc-kLgnNl.fOiAQn {
+    width: 40px !important;
+    height: 40px !important;
     border-radius: 12px;
   }
   span {
     font-weight: 500;
     color: var(--text-normal);
   }
-  ._entries_1oux5_113 {
+  ._entries_jxnjw_112 {
     gap: 1px;
   }
-  ._entry_1oux5_122 {
+  ._entry_jxnjw_121 {
     padding: 4px;
     background-color: unset;
 

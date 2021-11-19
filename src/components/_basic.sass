@@ -5,8 +5,16 @@
 /* Shadow on edge of top bar */
 main header { box-shadow:rgba(4, 4, 5, 0.2) 0px 1px 0px 0px, rgba(6, 6, 7, 0.05) 0px 1.5px 0px 0px, rgba(4, 4, 5, 0.05) 0px 2px 0px 0px; z-index: 1; }
 
-/* Changes divider color to be darker */
-main [role="feed"] [role="separator"] { border-color: #ffffff0f; }
+/* Changes divider color to be darker and sligns the text to the center */
+main [role="feed"] [role="separator"] {
+  border-color: #ffffff0f;
+
+  & > time {
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 2px 4px;
+  }
+}
 
 /* Shadow on server name/badge */
 nav header h1 { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
@@ -82,4 +90,26 @@ main [role="feed"] article a[href*="/server/"][href*="/channel/"]:not([href*="ht
   &:hover {
     background-color: #5856f2;
   }
+}
+
+/* Add orange marker to the left of pinged messages */
+.CaijV, .cCwoWr {
+    border-left: 2px solid var(--info-warning-foreground);
+    padding-left: 0;
+}
+
+/* More accurate background colors for individual messages */
+.dajneY:hover, .bFCPmG:hover, .fNoJBP:hover {
+  background-color: var(--background-message-hover);
+}
+.CaijV, .cCwoWr {
+  background-color: var(--background-mentioned);
+  &:hover {
+    background-color: var(--background-mentioned-hover);
+  }
+}
+@keyframes fGHvAw {
+    from {
+        background-color: var(--background-message-flash);
+    }
 }
