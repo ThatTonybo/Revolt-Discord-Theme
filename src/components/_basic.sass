@@ -1,21 +1,19 @@
 
 /* Rounded/floating message bar */
-.eOldEY { margin: 0 16px 24px; border-radius: 8px; }
+[aria-label="Message Box"] { margin: 0 16px 24px; border-radius: 8px; }
 
 /* Shadow on edge of top bar */
-.cCXoqw, .juzeIY { box-shadow:rgba(4, 4, 5, 0.2) 0px 1px 0px 0px, rgba(6, 6, 7, 0.05) 0px 1.5px 0px 0px, rgba(4, 4, 5, 0.05) 0px 2px 0px 0px; z-index: 1; }
+main header { box-shadow:rgba(4, 4, 5, 0.2) 0px 1px 0px 0px, rgba(6, 6, 7, 0.05) 0px 1.5px 0px 0px, rgba(4, 4, 5, 0.05) 0px 2px 0px 0px; z-index: 1; }
 
 /* Changes divider color to be darker */
-.UZWDV { border-color: #ffffff0f; }
+main [role="feed"] [role="separator"] { border-color: #ffffff0f; }
 
 /* Shadow on server name/badge */
-.kEdIWJ { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
-.EaqRn svg { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
+nav header h1 { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
+nav header svg { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
 
 /* User menu icon size adjustment to be equal to Discord */
-.abJyM > a:nth-child(2) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1),
-.abJyM > a:nth-child(3) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1),
-.abJyM > a:nth-child(1) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1) {
+nav > div:nth-child(2) > div > a > button > div > svg {
   height: 24px;
   width: 24px !important;
 }
@@ -35,43 +33,44 @@
   }
 }
 
+/* Couldn't figure out a nice way to do this without relying on classes :( */
 /* Buttons in settings now uses accent color */
-.dvKiPb {
+/*.dvKiPb {
   background: var(--accent);
   transition: 0.2s ease;
   button&:hover {
     background: var(--accent);
     opacity: 0.8;
   }
-}
+}*/
 
 /* Change color of category headings to match Discord, fix hover styling */
 .fMAmuP,
-.iMOVeJ summary .padding > svg {
+nav summary .padding > svg {
   color: rgb(142, 146, 151);
 }
-.iMOVeJ summary .padding:hover .fMAmuP,
-.iMOVeJ summary .padding:hover > svg {
+nav summary .padding:hover > * {
   filter: brightness(140%);
 }
 
 /* Edit message dialog changes */
-.ibFCMZ textarea {
+main [role="feed"] article textarea {
   background: #40444B;
   border-color: #40444B !important;
 }
 
 /* Make donate link in settings standard with the rest of the colors */
-._settings_vku0p_34 ._sidebar_vku0p_40 ._donate_vku0p_124 {
-  color: #848484 !important;
+/* The duplicate attribute selectors are just to get around CSS specificity issues */
+main nav a[href="https://insrt.uk/donate"][href][href] > button {
+  color: var(--tertiary-foreground) !important;
   &:hover {
-    color: #F6F6F6 !important;
+    color: var(--foreground) !important;
   }
 }
 
 /* Make user and channel mentions match Discord */
-._markdown_8b8eo_2 a[data-type="mention"],
-._markdown_8b8eo_2 a[href*="/server/"][href*="/channel/"]:not([href*="https://"]) {
+main [role="feed"] article a[data-type="mention"],
+main [role="feed"] article a[href*="/server/"][href*="/channel/"]:not([href*="https://"]) {
   border-radius: 3px;
   padding: 0 2px;
   background-color: #5856f253;
