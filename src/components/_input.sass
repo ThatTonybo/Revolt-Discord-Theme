@@ -1,26 +1,29 @@
-/* Brings typing, reply, upload and old message bars in line with message bar */
-.sc-bYEvvW ~ * {
-  width: calc(100% - 32px);
-  margin-left: 16px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
+main [role="feed"] {
+  /* Brings typing, reply, upload and old message bars in line with message bar */
+  ~ * {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
 
-/* Reply upload and viewing old message bars now use accurate colors */
-.ohaep, .jVIclB {
-  background: var(--background-tertiary);
-}
-.dFtsAb > div {
-  background: var(--background-accent);
-  color: white;
-  opacity: 0.95;
-  & > div {
-      &:first-of-type {
-        font-weight: 500;
-      }
-      &:last-of-type {
-        font-weight: 600;
-      }
+  /* Reply upload and viewing old message bars now use accurate colors */
+  ~ div:nth-child(3) > div {
+    background: var(--background-tertiary);
+  }
+
+  + div > div {
+    background: var(--background-accent);
+    color: white;
+    opacity: 0.95;
+    & > div {
+        &:first-of-type {
+          font-weight: 500;
+        }
+        &:last-of-type {
+          font-weight: 600;
+        }
+    }
   }
 }
 
