@@ -20,27 +20,39 @@ nav header + div {
     }
   }
 
-
   /* Channel button */
-  a > button {
-    margin-left: 8px;
+  a {
+    display: flex;
 
-    > div {
-      font-weight: 500;
-    }
+    > button {
+      margin: 0 8px;
+      border-radius: 4px;
 
-    > :first-child {
-      width: 20px;
-      height: 20px;
-      color: var(--tertiary-foreground);
-    }
+      > div {
+        font-weight: 500;
+      }
 
-    [data-style="unread"] {
-      position: absolute;
-      left: -4px;
-      width: 8px;
-      height: 8px;
-      margin: -4px 0 0;
+      > :first-child {
+        width: 20px;
+        height: 20px;
+        color: var(--tertiary-foreground);
+      }
+
+      [data-style="unread"] {
+        position: absolute;
+        left: -4px;
+        width: 8px;
+        height: 8px;
+        margin: -4px 0 0;
+      }
+
+      &:hover {
+        background: var(--background-modifier-hover) !important;
+      }
+
+      &[data-active="true"] {
+        background: var(--background-modifier-selected) !important;
+      }
     }
   }
 }
