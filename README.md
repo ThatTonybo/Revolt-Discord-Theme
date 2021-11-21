@@ -11,6 +11,10 @@
 - Go to `Settings -> Appearance -> Theme Overrides` and click the small "Import a theme" button to the right of the first text box. This will import your theme **from your clipboard**, make sure you have it copied and have allowed Revolt to read your clipboard.
 ![](https://get.snaz.in/3ynWjJc.png)
 
+You can also do the following things to improve the experience:
+- Set your emoji pack to Twemoji, the same that Discord uses.
+![](https://i.imgur.com/KzmS3w3.png)
+
 ## Bugs
 > At this time, Revolt does not have [consistent class naming](https://github.com/revoltchat/revite/issues/149), meaning that themes may partially break at any time
 
