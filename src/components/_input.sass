@@ -54,7 +54,7 @@ main [role="feed"] {
 }
 
 /* Server create button circle */
-.sc-iNqMzA.gmzsyz > .sc-fFucqa.gqHeVJ svg {
+nav > div:first-child a + button:only-of-type svg {
   background: var(--primary-header);
   color: #3BA55D;
   border-radius: 50%;
@@ -69,7 +69,7 @@ main [role="feed"] {
 }
 
 /* Attach file button circle */
-.sc-hOqruk.jqGkHP > .sc-fFucqa.gqHeVJ {
+[aria-label="Message Box"] > div:first-child > button {
   svg {
     background: var(--secondary-foreground);
     border-radius: 50%;
@@ -81,7 +81,7 @@ main [role="feed"] {
       color: var(--message-box);
     }
   }
-  &:hover > .StyledIconBase-ea9ulj-0 {
+  &:hover svg {
     filter: brightness(120%);
   }
 }
