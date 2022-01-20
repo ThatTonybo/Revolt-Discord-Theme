@@ -1,26 +1,29 @@
-/* Brings typing, reply, upload and old message bars in line with message bar */
-.sc-bYEvvW ~ * {
-  width: calc(100% - 32px);
-  margin-left: 16px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
+main [role="feed"] {
+  /* Brings typing, reply, upload and old message bars in line with message bar */
+  ~ * {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
 
-/* Reply upload and viewing old message bars now use accurate colors */
-.ohaep, .jVIclB {
-  background: var(--background-tertiary);
-}
-.dFtsAb > div {
-  background: var(--background-accent);
-  color: white;
-  opacity: 0.95;
-  & > div {
-      &:first-of-type {
-        font-weight: 500;
-      }
-      &:last-of-type {
-        font-weight: 600;
-      }
+  /* Reply upload and viewing old message bars now use accurate colors */
+  ~ div:nth-child(3) > div {
+    background: var(--background-tertiary);
+  }
+
+  + div > div {
+    background: var(--background-accent);
+    color: white;
+    opacity: 0.95;
+    & > div {
+        &:first-of-type {
+          font-weight: 500;
+        }
+        &:last-of-type {
+          font-weight: 600;
+        }
+    }
   }
 }
 
@@ -46,12 +49,12 @@
 }
 
 /* Move input box to the right to allow for upload button spacing */
-.eOldEY textarea {
+#message {
   margin-left: 10px;
 }
 
 /* Server create button circle */
-.sc-iNqMzA.gmzsyz > .sc-fFucqa.gqHeVJ svg {
+nav > div:first-child a + button:only-of-type svg {
   background: var(--primary-header);
   color: #3BA55D;
   border-radius: 50%;
@@ -66,7 +69,7 @@
 }
 
 /* Attach file button circle */
-.sc-hOqruk.jqGkHP > .sc-fFucqa.gqHeVJ {
+[aria-label="Message Box"] > div:first-child > button {
   svg {
     background: var(--secondary-foreground);
     border-radius: 50%;
@@ -78,7 +81,7 @@
       color: var(--message-box);
     }
   }
-  &:hover > .StyledIconBase-ea9ulj-0 {
+  &:hover svg {
     filter: brightness(120%);
   }
 }

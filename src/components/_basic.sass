@@ -1,28 +1,27 @@
 
 /* Rounded/floating message bar */
-.dneKvo { margin: 0 16px 24px; border-radius: 8px; }
+[aria-label="Message Box"] { margin: 0 16px 24px; border-radius: 8px; }
 
 /* Shadow on edge of top bar */
-.dTEhWW, .hwrDNq { box-shadow:rgba(4, 4, 5, 0.2) 0px 1px 0px 0px, rgba(6, 6, 7, 0.05) 0px 1.5px 0px 0px, rgba(4, 4, 5, 0.05) 0px 2px 0px 0px; z-index: 1; }
+main header { box-shadow:rgba(4, 4, 5, 0.2) 0px 1px 0px 0px, rgba(6, 6, 7, 0.05) 0px 1.5px 0px 0px, rgba(4, 4, 5, 0.05) 0px 2px 0px 0px; z-index: 1; }
 
-/* Changes divider color to be darker and aligns the text to the center */
-.iJPhgZ { 
-  border-color: #ffffff0f; 
-& > time { 
-  font-weight: 600; 
-  margin: 0 auto; 
-  padding: 2px 4px;
+/* Changes divider color to be darker and sligns the text to the center */
+main [role="feed"] [role="separator"] {
+  border-color: #ffffff0f;
+
+  & > time {
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 2px 4px;
   }
 }
 
 /* Shadow on server name/badge */
-.kiTojx { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
-.crRFlZ svg { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
+nav header h1 { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
+nav header svg { filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.8)); }
 
 /* User menu icon size adjustment to be equal to Discord */
-.abJyM > a:nth-child(2) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1),
-.abJyM > a:nth-child(3) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1),
-.abJyM > a:nth-child(1) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(1) {
+nav > div:nth-child(2) > div > a > button > div > svg {
   height: 24px;
   width: 24px !important;
 }
@@ -42,72 +41,76 @@
   }
 }
 
+/* Couldn't figure out a nice way to do this without relying on classes :( */
 /* Buttons in settings now uses accent color */
-.dvKiPb {
+/*.dvKiPb {
   background: var(--accent);
   transition: 0.2s ease;
   button&:hover {
     background: var(--accent);
     opacity: 0.8;
   }
-}
+}*/
 
 /* Change color of category headings to match Discord, fix hover styling */
-.fMAmuP,
-.iMOVeJ summary .padding > svg {
+nav summary .padding > * {
   color: rgb(142, 146, 151);
-}
-.iMOVeJ summary .padding:hover .fMAmuP,
-.iMOVeJ summary .padding:hover > svg {
-  filter: brightness(140%);
-}
 
-/* Edit message dialog changes */
-.ibFCMZ textarea {
-  background: #40444B;
-  border-color: #40444B !important;
+  &:hover {
+    filter: brightness(140%);
+  }
 }
 
 /* Make donate link in settings standard with the rest of the colors */
-._settings_vku0p_34 ._sidebar_vku0p_40 ._donate_vku0p_124 {
-  color: #848484 !important;
+/* The duplicate attribute selectors are just to get around CSS specificity issues */
+main nav a[href="https://insrt.uk/donate"][href][href] > button {
+  color: var(--tertiary-foreground) !important;
   &:hover {
-    color: #F6F6F6 !important;
+    color: var(--foreground) !important;
   }
 }
 
-/* Make user and channel mentions match Discord */
-._markdown_8b8eo_2 a[data-type="mention"],
-._markdown_8b8eo_2 a[href*="/server/"][href*="/channel/"]:not([href*="https://"]) {
-  border-radius: 3px;
-  padding: 0 2px;
-  background-color: #5856f253;
-  color: #DEE0FC;
-  font-weight: 500;
-  text-decoration: none;
-  transition: none;
+main [role="feed"] article {
+  /* Edit message dialog changes */
+  textarea {
+    background: #40444B;
+    border-color: #40444B !important;
+  }
 
+  /* Make user and channel mentions match Discord */
+  a[data-type="mention"],
+  a[href*="/server/"][href*="/channel/"]:not([href*="https://"]) {
+    border-radius: 3px;
+    padding: 0 2px;
+    background-color: #5856f253;
+    color: #DEE0FC;
+    font-weight: 500;
+    text-decoration: none;
+    transition: none;
+
+    &:hover {
+      background-color: #5856f2;
+    }
+  }
+
+  /* Add orange marker to the left of pinged messages */
+  &[role="alert"] {
+      border-left: 2px solid var(--info-warning-foreground);
+      padding-left: 0;
+  }
+
+  /* More accurate background colors for individual messages */
   &:hover {
-    background-color: #5856f2;
+    background-color: var(--background-message-hover);
+  }
+  &[role="alert"]:hover {
+    background-color: var(--background-mentioned);
+    &:hover {
+      background-color: var(--background-mentioned-hover);
+    }
   }
 }
 
-/* Add orange marker to the left of pinged messages */
-.CaijV, .cCwoWr {
-    border-left: 2px solid var(--info-warning-foreground);
-    padding-left: 0;
-}
-
-/* More accurate background colors for individual messages */
-.dajneY:hover, .bFCPmG:hover, .fNoJBP:hover {
-  background-color: var(--background-message-hover);
-}
-.CaijV, .cCwoWr {
-  background-color: var(--background-mentioned);
-  &:hover {
-    background-color: var(--background-mentioned-hover);
-  }
-}
 @keyframes fGHvAw {
     from {
         background-color: var(--background-message-flash);

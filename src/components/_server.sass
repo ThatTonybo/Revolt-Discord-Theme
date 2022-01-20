@@ -1,65 +1,71 @@
 /* Hides the wave used as a chosen server indicator by default */
-.eEVWwW span, .cfijTK span { display: none; }
+nav a span { display: none; }
 
 /* Replicates selected server image indicator */
-.hPYiAq > div, .hPYiAq > div img { border-radius: 50%; transition: 0.25s ease; }
-.hPYiAq > div:hover img, .czAOsy:hover div { border-radius: 10px; }
-.eEVWwW > div, .eEVWwW > div img { border-radius: 10px; }
+nav a foreignObject > * { border-radius: 50%; transition: 0.25s ease; }
+nav a:hover foreignObject > *,
+nav [aria-label="Selected"] foreignObject > * { border-radius: 10px; }
 
 /* Server indicator bars/dots (for selected, hover and unread) */
-.sc-jeGTLq foreignObject::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -10px;
-  transform: translateY(-50%);
-  display: block;
-  width: 0.1px;
-  height: 0.1px;
-  background: white;
-  border-radius: 4px;
-  transition: width .25s, height .25s;
-}
-.sc-jeGTLq foreignObject {
-  mask: unset;
-}
-.sc-jeGTLq circle {
-  display: none;
+nav a {
+  foreignObject {
+    mask: unset;
 
-  /* Pings */
-  &[fill="var(--error)"] {
-    display: block;
-    cx: 26px;
-    cy: 26px;
-    r: 7px;
-    stroke: var(--background);
-    stroke-width: 3px;
-
-    & + text {
-      font-weight: 600;
-      transform: translate(-1px, 23px);
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -10px;
+      transform: translateY(-50%);
+      display: block;
+      width: 0.1px;
+      height: 0.1px;
+      background: white;
+      border-radius: 4px;
+      transition: width .25s, height .25s;
     }
+  }
+
+  circle {
+    display: none;
+
+    /* Pings */
+    &[fill="var(--error)"] {
+      display: block;
+      cx: 26px;
+      cy: 26px;
+      r: 7px;
+      stroke: var(--background);
+      stroke-width: 3px;
+
+      & + text {
+        font-weight: 600;
+        transform: translate(-1px, 23px);
+      }
+    }
+  }
+
+  /* server has unread message(s) */
+  foreignObject:not(:last-child)::before {
+    width: 8px;
+    height: 8px;
+  }
+  &:hover foreignObject::before {
+    width: 8px;
+    height: 20px !important;
+  }
+
+  /* server selected */
+  [aria-label="Selected"] foreignObject::before {
+    width: 8px;
+    height: 30px !important;
   }
 }
 
-/* server has unread message(s) */
-.sc-jeGTLq foreignObject:not(:last-child)::before {
-  width: 8px;
-  height: 8px;
-}
-.hPYiAq:hover foreignObject::before {
-  width: 8px;
-  height: 20px !important;
-}
-
-/* server selected */
-.eEVWwW foreignObject::before {
-  width: 8px;
-  height: 30px !important;
-}
-.sc-jeGTLq,
-.sc-jeGTLq > div,
-.sc-jeGTLq > div > svg,
-.sc-jeGTLq > div > svg > foreignObject:nth-child(2) {
+/* to ensure that server indicators are visible outside the boxes */
+nav a > div,
+nav a > div > div,
+nav a > div > div > svg,
+nav a > div > div > svg > foreignObject:nth-child(2) {
   overflow: visible;
 }
